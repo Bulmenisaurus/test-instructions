@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Streaks</title>
+        <script src="./dist/script.js" defer></script>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <nav>
+            <h1>Streaks</h1>
+            <button id="new">+</button>
+        </nav>
+        <main></main>
+        <div id="modal-bg"></div>
+        <div id="create-modal" class="modal">
+            <h1>New goal</h1>
+            <label for="streak-name">Name</label>
+            <input type="text" id="streak-name" placeholder="Change da world" />
+            <label for="streak-description">Description</label>
+            <textarea id="streak-description"></textarea>
+            <button id="create">Create</button>
+        </div>
+        <div id="confirm-reset-modal" class="modal">
+            <h1>Are you sure you want to end this streak?</h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Consolas, Courier, monospace;
+    font-size: 20px;
+}
+
+/* navbar */
+
+nav {
+    height: 42px;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav h1 {
+    grid-column: 2;
+    place-self: center;
+}
+
+nav #new {
+    grid-column: 3;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    place-self: center;
+}
+
+/* streaks */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 20px;
+}
+
+.streak {
+    width: min(400px, calc(100vw - 40px));
+
+    padding: 20px;
+    font-size: 20px;
+
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.streak .duration {
+    font-size: 50px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.streak .name {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+.streak .highest {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.streak .reset {
+    grid-column: 2;
+    grid-row: 3;
+
+    border: none;
+    background: none;
+    font: inherit;
+}
+
+/* modals */
+
+#modal-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 50%);
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.modal h1 {
+    font-size: 60px;
+}
+
+#create-modal {
+    padding: 20px;
+    display: none;
+}
+
+#create-modal label {
+    display: block;
+    margin: 10px 0;
+}
+
+#create-modal input {
+    font: inherit;
+    padding: 5px;
+}
+
+#create-modal textarea {
+    width: 30em;
+    height: 10em;
+    resize: none;
+}
+
+#create-modal #create {
+    display: block;
+    background-color: white;
+    border: 1px solid black;
+    font: inherit;
+    margin: 20px 0;
+    padding: 10px 10px;
+}
+
+#confirm-reset-modal {
+    display: none;
+}
